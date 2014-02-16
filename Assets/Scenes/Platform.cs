@@ -3,9 +3,12 @@ using System.Collections;
 
 public class Platform : MonoBehaviour {
 
-	public GameObject Cube;
-	public GameObject Sphere;
+	public GameObject Prefab01;
+	public GameObject Prefab02;
+	//public GameObject Sphere;
 	private GameObject player;
+
+	//public Avatar[] avatars = new Avatar[0];
 
 	// Use this for initialization
 	void Start () {
@@ -16,14 +19,15 @@ public class Platform : MonoBehaviour {
 		switch(character)
 		{
 		case "Cube":
-			player = (GameObject)Instantiate(Cube);
+			player = (GameObject)Instantiate(Prefab01);
 			player.transform.parent = transform;
 
 			break;
 
 		case "Sphere":
-			player = (GameObject)Instantiate(Sphere);
+			player = (GameObject)Instantiate(Prefab02);
 			player.transform.parent = transform;
+
 			break;
 
 		}
