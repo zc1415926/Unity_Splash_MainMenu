@@ -21,13 +21,14 @@ public class Platform : MonoBehaviour {
 		case "Cube":
 			player = (GameObject)Instantiate(Prefab01);
 			player.transform.parent = transform;
+			((ThirdPersonCamera)GameObject.Find ("Main Camera").GetComponent("ThirdPersonCamera")).standardPos = GameObject.Find ("CamPos").transform;
 
 			break;
 
 		case "Sphere":
 			player = (GameObject)Instantiate(Prefab02);
 			player.transform.parent = transform;
-
+			((ThirdPersonCamera)GameObject.Find ("Main Camera").GetComponent("ThirdPersonCamera")).standardPos = GameObject.Find ("CamPos").transform;
 			break;
 
 		}

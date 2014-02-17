@@ -43,6 +43,8 @@ public class BotControlScript : MonoBehaviour
 		enemy = GameObject.Find("Enemy").transform;	
 		if(anim.layerCount ==2)
 			anim.SetLayerWeight(1, 1);
+
+		//((ThirdPersonCamera)GameObject.Find ("Main Camera").GetComponent("ThirdPersonCamera")).standardPos = GameObject.Find ("CamPos").transform;
 	}
 	
 	
